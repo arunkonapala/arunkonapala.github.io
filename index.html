@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Arun Konapala – Lead AI/GenAI Platform Engineer</title>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --navy: #1a1a2e;
+      --mid: #444;
+      --light: #666;
+      --border: #ddd;
+      --bg: #fff;
+      --accent: #2563eb;
+    }
+
+    body {
+      font-family: 'Georgia', 'Times New Roman', serif;
+      font-size: 15px;
+      line-height: 1.65;
+      color: var(--navy);
+      background: var(--bg);
+    }
+
+    a { color: var(--accent); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky;
+      top: 0;
+      background: var(--bg);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+      display: flex;
+      justify-content: center;
+      gap: 32px;
+      padding: 12px 24px;
+    }
+
+    nav a {
+      font-family: 'Arial', sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--mid);
+    }
+
+    nav a:hover { color: var(--navy); text-decoration: none; }
+
+    /* ── Main container ── */
+    .container {
+      max-width: 760px;
+      margin: 0 auto;
+      padding: 48px 24px 80px;
+    }
+
+    /* ── Header ── */
+    header {
+      text-align: center;
+      padding-bottom: 32px;
+      border-bottom: 2px solid var(--navy);
+      margin-bottom: 40px;
+    }
+
+    header h1 {
+      font-family: 'Georgia', serif;
+      font-size: 2.6rem;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    header .title {
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      color: var(--light);
+      letter-spacing: 0.08em;
+      margin-bottom: 14px;
+    }
+
+    header .contact {
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      color: var(--mid);
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 6px 4px;
+    }
+
+    header .contact .sep { color: #bbb; }
+
+    /* ── Sections ── */
+    section { margin-bottom: 40px; }
+
+    section h2 {
+      font-family: 'Arial', sans-serif;
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.24em;
+      text-transform: uppercase;
+      color: var(--navy);
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 5px;
+      margin-bottom: 20px;
+    }
+
+    /* ── Summary ── */
+    .summary p {
+      font-size: 15px;
+      color: #333;
+      line-height: 1.7;
+    }
+
+    /* ── Experience ── */
+    .job { margin-bottom: 24px; }
+
+    .job-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+    }
+
+    .company {
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .location {
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      color: var(--light);
+    }
+
+    .job-meta {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 2px;
+      margin-bottom: 8px;
+    }
+
+    .role {
+      font-family: 'Arial', sans-serif;
+      font-style: italic;
+      font-size: 14px;
+      color: var(--mid);
+    }
+
+    .dates {
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      color: var(--light);
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    ul li {
+      position: relative;
+      padding-left: 18px;
+      margin-bottom: 6px;
+      color: #333;
+    }
+
+    ul li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      color: var(--light);
+    }
+
+    /* ── Projects ── */
+    .project { margin-bottom: 20px; }
+
+    .project-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+      gap: 4px;
+      margin-bottom: 4px;
+    }
+
+    .project-name {
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      font-size: 14.5px;
+    }
+
+    .project-stack {
+      font-family: 'Arial', sans-serif;
+      font-size: 12px;
+      color: var(--light);
+      font-style: italic;
+    }
+
+    .projects-note {
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      color: var(--mid);
+      margin-bottom: 16px;
+    }
+
+    /* ── Skills ── */
+    .skills-list {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px 32px;
+    }
+
+    .skill-row {
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      color: #333;
+      line-height: 1.55;
+    }
+
+    .skill-row strong {
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    /* ── Certifications ── */
+    .cert-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px 32px;
+    }
+
+    .cert-issuer {
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      font-size: 13.5px;
+      margin-bottom: 3px;
+    }
+
+    .cert-detail {
+      font-family: 'Arial', sans-serif;
+      font-size: 12.5px;
+      color: var(--mid);
+      line-height: 1.5;
+    }
+
+    /* ── Education ── */
+    .edu-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      flex-wrap: wrap;
+    }
+
+    .institution {
+      font-family: 'Arial', sans-serif;
+      font-weight: 700;
+      font-size: 15px;
+    }
+
+    .edu-location {
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      color: var(--light);
+    }
+
+    .edu-degree {
+      font-family: 'Arial', sans-serif;
+      font-style: italic;
+      font-size: 14px;
+      color: var(--mid);
+    }
+
+    .edu-dates {
+      font-family: 'Arial', sans-serif;
+      font-size: 13px;
+      color: var(--light);
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 600px) {
+      header h1 { font-size: 1.8rem; }
+      nav { gap: 16px; flex-wrap: wrap; }
+      .skills-list { grid-template-columns: 1fr; }
+      .cert-grid { grid-template-columns: 1fr; }
+      .job-header, .project-header { flex-direction: column; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="#summary">About</a>
+    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+    <a href="#certifications">Certifications</a>
+    <a href="#education">Education</a>
+  </nav>
+
+  <div class="container">
+
+    <!-- Header -->
+    <header>
+      <h1>Arun Konapala</h1>
+      <div class="title">Lead AI / GenAI Platform Engineer &nbsp;·&nbsp; AWS Bedrock &nbsp;·&nbsp; Agentic AI &nbsp;·&nbsp; LangChain &nbsp;·&nbsp; Python</div>
+      <div class="contact">
+        <span>Aldie, VA</span>
+        <span class="sep">•</span>
+        <a href="mailto:arun.konapala@gmail.com">arun.konapala@gmail.com</a>
+        <span class="sep">•</span>
+        <a href="https://linkedin.com/in/arunkonapala" target="_blank">LinkedIn</a>
+        <span class="sep">•</span>
+        <a href="https://github.com/arunkonapala" target="_blank">GitHub</a>
+      </div>
+    </header>
+
+    <!-- Summary -->
+    <section id="summary" class="summary">
+      <h2>About</h2>
+      <p>
+        Lead Software Engineer with 20 years of enterprise and AI engineering experience, currently at Fannie Mae architecting agentic AI platforms, LLM evaluation frameworks, and MCP-integrated GenAI systems on AWS. Deep expertise in AWS Bedrock, LangChain, RAG pipelines, multi-agent orchestration (MCP, AWS AgentCore, LangGraph), and Python microservices across financial services and mortgage data domains. Proven record of delivering enterprise-wide AI platforms — from observability frameworks and text-to-SQL agents to Angular-based AI ops dashboards — adopted across business units and meeting regulatory compliance requirements.
+      </p>
+    </section>
+
+    <!-- Experience -->
+    <section id="experience">
+      <h2>Experience</h2>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="company">Fannie Mae</span>
+          <span class="location">Reston, VA</span>
+        </div>
+        <div class="job-meta">
+          <span class="role">Lead Software Engineer · Contract</span>
+          <span class="dates">Apr 2016 – Present</span>
+        </div>
+        <ul>
+          <li>Led a team of 10 engineers integrating MCP servers with MCP Gateway and APIGEE to enable standardized AI tool connectivity across the enterprise.</li>
+          <li>Enabled AWS Bedrock AgentCore Runtime, AgentCore Memory, and AgentCore Code Interpreter for dynamic analytics over loan forecast data.</li>
+          <li>Designed multi-layer observability framework for AI inference pipeline with real-time metrics enrichment, KMS encryption, and audit compliance across 3 Lambda workloads.</li>
+          <li>Designed FastAPI monitoring &amp; management platform for AI/ML operations with RBAC auth, camelCase JSON responses, and dynamic role binding to AD groups.</li>
+          <li>Designed standalone Angular SPA with signals-based state management featuring AI/ML ops dashboards — serving 1,000+ users across business units.</li>
+          <li>Designed LLM Evaluation Framework benchmarking 40+ foundational models — enabling continuous monitoring and early detection of performance drift.</li>
+          <li>Architected configuration-driven Hydration Framework adopted org-wide — reducing onboarding time for new data sources from weeks to days.</li>
+          <li>Designed Operational Insights Hub (Lineage Explorer) leveraging Neo4j for end-to-end lineage visualization meeting regulatory expectations.</li>
+          <li>Designed enterprise application for Model Risk Management reporting on MUSE data using AWS — addressing reporting needs of 1LOD, 2LOD, 3LOD, and regulators.</li>
+          <li>Built queue-based orchestrator with SQS poller and AggregationStage cascade (1min→5min→hourly→daily→monthly) with DirtyPartitionTracker for late-arriving data.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="company">Various Clients (Independence Blue Cross, BCBS, Societe Generale CIB)</span>
+          <span class="location">IL / PA</span>
+        </div>
+        <div class="job-meta">
+          <span class="role">Liferay Portal Architect · Contract</span>
+          <span class="dates">Apr 2014 – Mar 2016</span>
+        </div>
+        <ul>
+          <li>Architected and delivered Liferay portal solutions including BlueWeb member portal, IBX sales portal, and SG CIB self-service trading module.</li>
+          <li>Implemented full-text search, multi-node clustering, SSO integration, and performance tuning across client environments.</li>
+          <li>Ensured high availability by configuring multi-node Liferay clusters — meeting production SLAs and minimizing downtime risk.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="company">Mahindra Satyam</span>
+          <span class="location">United States</span>
+        </div>
+        <div class="job-meta">
+          <span class="role">Liferay Team Lead · Full-time</span>
+          <span class="dates">Jul 2010 – Mar 2014</span>
+        </div>
+        <ul>
+          <li>Led portal architecture and Java development across GE Transportation, Cisco, Computer Associates, and Thomson Reuters — delivering projects on time.</li>
+          <li>Designed RESTful and SOAP-based web services and integrated Ping Identity SSO across customer-facing portals.</li>
+        </ul>
+      </div>
+
+      <div class="job">
+        <div class="job-header">
+          <span class="company">Prithvi Information Solutions Ltd</span>
+          <span class="location">United States</span>
+        </div>
+        <div class="job-meta">
+          <span class="role">Senior Software Engineer · Full-time</span>
+          <span class="dates">Jun 2006 – Jul 2010</span>
+        </div>
+        <ul>
+          <li>Delivered Java-based enterprise applications with reusable modules, data validation layers, and IAM integrations enforcing role-based governance.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Projects -->
+    <section id="projects">
+      <h2>Projects</h2>
+      <p class="projects-note">Source code available at <a href="https://github.com/arunkonapala" target="_blank">github.com/arunkonapala</a></p>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">AutoMed: Multi-Agent Healthcare Chatbot</span>
+          <span class="project-stack">Python · AG2 (AutoGen) · Multi-Agent AI · LLMs</span>
+        </div>
+        <ul>
+          <li>Built a multi-agent healthcare chatbot using AG2 (AutoGen) orchestrating specialized agents for symptom analysis, treatment suggestions, and follow-up care — delivering health-history-aware, context-sensitive recommendations that simulate expert medical team collaboration.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">Meal &amp; Grocery Planner with CrewAI</span>
+          <span class="project-stack">Python · CrewAI · Pydantic · LLMs · YAML · Agentic AI</span>
+        </div>
+        <ul>
+          <li>Built an end-to-end meal planning system using CrewAI agents for recipe research, shopping organization, and budget optimization — backed by a CrewBase architecture with Pydantic models and declarative YAML config.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">Style Finder: Computer Vision Fashion Analysis</span>
+          <span class="project-stack">Python · Llama 4 · Multimodal RAG · Computer Vision · Angular</span>
+        </div>
+        <ul>
+          <li>Built a multimodal RAG pipeline using Llama 4 Maverick 17B and image encoding for vector-based fashion similarity search — delivering catalog-style AI insights via an Angular web application.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">DataWizard: AI-Powered Data Analysis Agent</span>
+          <span class="project-stack">Python · LangChain · LLMs · Scikit-learn · Agentic AI</span>
+        </div>
+        <ul>
+          <li>Built a LangChain-powered AI agent enabling non-technical users to perform CSV analysis, statistical summarization, and ML model training through natural language.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">AI Meeting Assistant</span>
+          <span class="project-stack">Python · Whisper · AWS Bedrock · LangChain · React · LLMs</span>
+        </div>
+        <ul>
+          <li>Built an AI meeting assistant integrating Whisper STT with AWS Bedrock and LangChain — automating capture of decisions, action items, and deadlines into structured meeting minutes via a React interface.</li>
+        </ul>
+      </div>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">Interactive Food Search &amp; RAG Chatbot System</span>
+          <span class="project-stack">Python · Chroma DB · RAG · LLMs · NLP</span>
+        </div>
+        <ul>
+          <li>Built a food recommendation system combining Chroma DB vector search and RAG with advanced metadata filtering — delivering AI-enhanced conversational recommendations across three distinct search approaches.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div class="skills-list">
+        <div class="skill-row"><strong>Generative AI:</strong> AWS Bedrock, AWS AgentCore, GitHub Copilot, Claude, ChatGPT, Hugging Face, Guardrails AI, Portkey, MCP</div>
+        <div class="skill-row"><strong>AI Techniques:</strong> RAG, Prompt Engineering, Fine-tuning, Vector Embeddings, NLP, Computer Vision, Multimodal AI</div>
+        <div class="skill-row"><strong>AI / ML:</strong> SageMaker, DeepEval, LangChain, LangGraph, LangSmith, LlamaIndex, CrewAI, AutoGen (AG2), Strands Agents, Whisper, Scikit-learn, NumPy, Pandas, PyTorch, TensorFlow</div>
+        <div class="skill-row"><strong>Languages:</strong> Python, Java, TypeScript</div>
+        <div class="skill-row"><strong>Backend:</strong> Spring Boot, Flask, FastAPI, Hibernate, Pydantic</div>
+        <div class="skill-row"><strong>Frontend:</strong> Angular, React, Next.js, Streamlit</div>
+        <div class="skill-row"><strong>Data Stores:</strong> S3, PostgreSQL, MySQL, DynamoDB, Redshift, Neo4j, FAISS, Chroma DB, pgvector, Redis, Elasticsearch</div>
+        <div class="skill-row"><strong>Compute &amp; Containers:</strong> EC2, ECS, Lambda, EMR, Kubernetes, Apache Spark, Elastic Beanstalk</div>
+        <div class="skill-row"><strong>Messaging &amp; Events:</strong> SNS, SQS, EventBridge, Apache Kafka</div>
+        <div class="skill-row"><strong>Monitoring &amp; Logging:</strong> CloudWatch, CloudTrail, X-Ray, Dynatrace, Splunk, OpenTelemetry</div>
+        <div class="skill-row"><strong>Security &amp; Compliance:</strong> SonarQube, Ping Identity SSO, Secrets Manager, IAM, KMS</div>
+        <div class="skill-row"><strong>Infrastructure as Code:</strong> CloudFormation, Terraform</div>
+        <div class="skill-row"><strong>CI/CD &amp; Deployment:</strong> Jenkins, GitLab, GitHub Actions, CodePipeline, Docker</div>
+        <div class="skill-row"><strong>Web Services:</strong> RESTful APIs, GraphQL</div>
+      </div>
+    </section>
+
+    <!-- Certifications -->
+    <section id="certifications">
+      <h2>Certifications</h2>
+      <div class="cert-grid">
+        <div>
+          <div class="cert-issuer">IBM — 10 AI &amp; GenAI Certifications (2025)</div>
+          <div class="cert-detail">Agentic AI with LangGraph, CrewAI, AutoGen &amp; BeeAI · IBM RAG and Agentic AI · Multimodal GenAI Applications · Advanced RAG with Vector Databases · +6 GenAI &amp; Agentic AI courses</div>
+        </div>
+        <div>
+          <div class="cert-issuer">Amazon Web Services (2025)</div>
+          <div class="cert-detail">Generative AI for Developers · GenAI Applications with Amazon Bedrock · Getting Started with AWS GenAI</div>
+        </div>
+        <div>
+          <div class="cert-issuer">Databricks (2025)</div>
+          <div class="cert-detail">Academy Accreditation – Generative AI Fundamentals</div>
+        </div>
+        <div>
+          <div class="cert-issuer">Pegasystems &amp; Sun Microsystems</div>
+          <div class="cert-detail">PRPC CSA – Pegasystems · SCJP – Sun Microsystems</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Education -->
+    <section id="education">
+      <h2>Education</h2>
+      <div class="edu-header">
+        <span class="institution">SRKR Engineering College</span>
+        <span class="edu-location">India</span>
+      </div>
+      <div class="edu-degree">Bachelor of Engineering</div>
+      <div class="edu-dates">Aug 2000 – Oct 2004</div>
+    </section>
+
+  </div>
+
+</body>
+</html>
