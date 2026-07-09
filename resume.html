@@ -1,0 +1,307 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Arun Konapala — Resume</title>
+<style>
+  /* Print source for resume.pdf — open in Chrome and print to PDF
+     (or regenerate headlessly; see repo README/commit notes). */
+  @page { size: letter; margin: 0.5in 0.6in; }
+  * { box-sizing: border-box; }
+  body {
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 12.3px;
+    line-height: 1.38;
+    color: #333;
+    margin: 0;
+    -webkit-print-color-adjust: exact;
+  }
+  header { text-align: center; margin-bottom: 14px; }
+  header h1 {
+    font-size: 26px;
+    letter-spacing: 0.35em;
+    margin: 0 0 6px;
+    font-weight: 700;
+    color: #222;
+  }
+  .title, .contact {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: #666;
+    margin: 2px 0;
+  }
+  .title { letter-spacing: 0.02em; }
+  a { color: inherit; text-decoration: none; }
+
+  h2 {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
+    color: #444;
+    border-bottom: 1px solid #aaa;
+    padding-bottom: 4px;
+    margin: 14px 0 8px;
+  }
+  section p { margin: 0 0 8px; }
+
+  .job, .project { margin-bottom: 10px; }
+  .job { break-inside: avoid-page; }
+  .project { break-inside: avoid; }
+  .row {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 12px;
+  }
+  .job-name, .project-name {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 13px;
+    color: #222;
+  }
+  .job-loc, .job-dates {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: #777;
+    text-align: right;
+    white-space: nowrap;
+  }
+  .job-role {
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    font-size: 11.5px;
+    color: #555;
+  }
+  .project-stack {
+    font-family: Arial, sans-serif;
+    font-style: italic;
+    font-size: 10.5px;
+    color: #777;
+    text-align: right;
+    margin-left: auto;
+  }
+  ul { margin: 3px 0 0; padding-left: 18px; }
+  li { margin: 2px 0; }
+  .projects-note {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 10px;
+  }
+
+  .skills-grid, .certs-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    column-gap: 28px;
+    row-gap: 8px;
+  }
+  .skill {
+    font-family: Arial, sans-serif;
+    font-size: 11px;
+    color: #444;
+    break-inside: avoid;
+  }
+  .skill strong { color: #222; }
+  .cert { break-inside: avoid; }
+  .cert-name {
+    font-family: Arial, sans-serif;
+    font-weight: 700;
+    font-size: 12px;
+    color: #222;
+    margin-bottom: 2px;
+  }
+  .cert-detail {
+    font-family: Arial, sans-serif;
+    font-size: 10.5px;
+    color: #666;
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <h1>ARUN KONAPALA</h1>
+  <div class="title">Lead AI / GenAI Platform Engineer &nbsp;·&nbsp; AWS Bedrock &nbsp;·&nbsp; Agentic AI &nbsp;·&nbsp; LangChain &nbsp;·&nbsp; Python</div>
+  <div class="contact">Aldie, VA &nbsp;•&nbsp; (630) 649-8829 &nbsp;•&nbsp; arun.konapala@gmail.com &nbsp;•&nbsp; linkedin.com/in/arunkonapala &nbsp;•&nbsp; github.com/arunkonapala</div>
+</header>
+
+<section>
+  <h2>Summary</h2>
+  <p>Lead Software Engineer with 20 years of enterprise and AI engineering experience, currently at Fannie Mae architecting agentic AI platforms, LLM evaluation frameworks, and MCP-integrated GenAI systems on AWS. Deep expertise in AWS Bedrock, LangChain, RAG pipelines, multi-agent orchestration (MCP, AWS AgentCore, LangGraph), and Python microservices across financial services and mortgage data domains. Proven record of delivering enterprise-wide AI platforms — from observability frameworks and text-to-SQL agents to Angular-based AI ops dashboards — adopted across business units and meeting regulatory compliance requirements.</p>
+</section>
+
+<section>
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="row"><span class="job-name">Fannie Mae</span><span class="job-loc">Reston, VA</span></div>
+    <div class="row"><span class="job-role">Lead Software Engineer · Contract</span><span class="job-dates">Apr 2016 – Present</span></div>
+    <ul>
+      <li>Led a team of 10 engineers in design discussions with Enterprise Architects, Infosec Architects, and Vendors — integrating MCP servers with MCP Gateway and APIGEE to enable standardized AI tool connectivity across the enterprise.</li>
+      <li>Collaborated with Enterprise Architects and Infosec Architects to enable AWS Bedrock AgentCore Runtime, AgentCore Memory, and AgentCore Code Interpreter — supporting business use cases requiring dynamic analytics over loan forecast data.</li>
+      <li>Designed multi-layer observability framework for AI inference pipeline with real-time metrics enrichment, KMS encryption, and audit compliance — standardized observability across 3 Lambda workloads enabling cost attribution and model health monitoring at scale.</li>
+      <li>Designed and implemented queue-based orchestrator with SQS poller → RawIngestionStage (buffer/flush) → AggregationStage cascade (1min→5min→hourly→daily→monthly), using DirtyPartitionTracker for late-arriving data recovery and CDHBARScheduler for daily metadata enrichment.</li>
+      <li>Designed and implemented FastAPI monitoring &amp; management platform for AI/ML operations — tracks utilization and performance with RBAC auth, camelCase JSON responses, and dynamic role binding to AD groups.</li>
+      <li>Designed and implemented standalone Angular SPA with signals-based state management, lazy-loaded feature routes, and strict TypeScript — featuring AI/ML ops dashboards covering Metrics, Models, Traces &amp; Logs, Agents Registry, Budget Tracking, Cost Optimization, and Onboarding flows, serving 1,000+ users across business units.</li>
+      <li>Reduced model quality risk enterprise-wide by designing and implementing a robust LLM Evaluation Framework that benchmarks 40+ foundational models and GenAI applications — enabling continuous monitoring and early detection of performance drift.</li>
+      <li>Standardized enterprise data ingestion by architecting and implementing a configuration-driven Hydration Framework adopted org-wide — eliminating bespoke pipelines and reducing onboarding time for new data sources from weeks to days.</li>
+      <li>Designed and implemented the Operational Insights Hub (now Lineage Explorer) — the single source of metadata, controls, STTM documents, and operational metrics for enterprise users; leveraged Neo4j graph database for end-to-end lineage visualization meeting regulatory expectations.</li>
+      <li>Designed and implemented an enterprise application for Model Risk Management reporting on Model Usage Inventory System (MUSE) data using AWS — addressing the reporting needs of 1LOD, 2LOD, 3LOD, and regulators.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="row"><span class="job-name">Various Clients (Independence Blue Cross, Blue Cross Blue Shield Association, Societe Generale CIB)</span><span class="job-loc">IL / PA</span></div>
+    <div class="row"><span class="job-role">Liferay Portal Architect · Contract</span><span class="job-dates">Apr 2014 – Mar 2016</span></div>
+    <ul>
+      <li>Architected and delivered Liferay portal solutions across healthcare and financial services clients — including the BlueWeb member portal (BCBS), IBX sales portal, and a self-service trading module for SG CIB — improving usability, scalability, and role-based access across all platforms.</li>
+      <li>Implemented Apache SOLR-based full-text search across multiple portals — reducing query latency and improving content discoverability for members, sales representatives, and administrators.</li>
+      <li>Ensured high availability by configuring multi-node Liferay clusters and leading post-migration performance tuning — meeting production SLAs and minimizing downtime risk across client environments.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="row"><span class="job-name">Mahindra Satyam</span><span class="job-loc">United States</span></div>
+    <div class="row"><span class="job-role">Liferay Team Lead · Full-time</span><span class="job-dates">Jul 2010 – Mar 2014</span></div>
+    <ul>
+      <li>Led a team of engineers across multiple client engagements by providing technical direction on Liferay portal architecture, RESTful service design, and Java development — consistently delivering projects on time across GE Transportation, Cisco, Computer Associates, and Thomson Reuters.</li>
+      <li>Enabled system interoperability across customer-facing portals by designing and implementing RESTful and SOAP-based web services — providing standardized data exchange interfaces for downstream consumers and third-party integrations.</li>
+      <li>Improved application responsiveness across multiple client portals by profiling and performance-tuning Spring and Hibernate modules — resolving bottlenecks and delivering faster, more reliable user experiences.</li>
+      <li>Secured enterprise access by integrating Ping Identity and SSO systems for authentication and authorization — enforcing role-based controls and meeting enterprise security standards across client environments.</li>
+    </ul>
+  </div>
+
+  <div class="job">
+    <div class="row"><span class="job-name">Prithvi Information Solutions Ltd</span><span class="job-loc">United States</span></div>
+    <div class="row"><span class="job-role">Senior Software Engineer · Full-time</span><span class="job-dates">Jun 2006 – Jul 2010</span></div>
+    <ul>
+      <li>Delivered Java-based enterprise applications across client engagements — building reusable modules, data validation layers, and Identity &amp; Access Management integrations that enforced role-based governance and compliance across organizations.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Projects</h2>
+  <p class="projects-note">Source code available at github.com/arunkonapala</p>
+
+  <div class="project">
+    <div class="row"><span class="project-name">Finance Copilot: Conversational Personal Finance Assistant</span><span class="project-stack">Python · FastAPI · Claude · Tool Use · SSE · Angular</span></div>
+    <ul>
+      <li>Built a conversational finance copilot with a streaming agentic tool-use loop on Anthropic Claude — eight finance tools spanning spending analysis, budgets, bills, and portfolio Q&amp;A, streamed token-by-token over SSE to an Angular 20 chat UI with a provider-pluggable backend supporting OpenAI-compatible endpoints.</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="row"><span class="project-name">FinDocQA: Financial Document Q&amp;A with RAG</span><span class="project-stack">Python · LangChain · FAISS · Cohere · Claude · AWS S3 · Angular</span></div>
+    <ul>
+      <li>Built a RAG pipeline over annual reports and SEC filings using FAISS vector search with Cohere embeddings and LangChain — delivering grounded Claude answers with page-level citations through an Angular UI, with document storage on AWS S3.</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="row"><span class="project-name">AI Nutrition Coach: Meal Photo Analysis</span><span class="project-stack">Python · FastAPI · Claude Vision · Multimodal AI · Angular</span></div>
+    <ul>
+      <li>Built a multimodal nutrition assistant that analyzes meal photos with Claude vision agents — returning structured nutrient breakdowns and recipe ideas via a FastAPI backend and an Angular 20 interface.</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="row"><span class="project-name">AutoMed: Multi-Agent Healthcare Chatbot</span><span class="project-stack">Python · AG2 (AutoGen) · Multi-Agent AI · LLMs</span></div>
+    <ul>
+      <li>Built a multi-agent healthcare chatbot using AG2 (AutoGen) orchestrating specialized agents for symptom analysis, treatment suggestions, and follow-up care — delivering health-history-aware, context-sensitive recommendations that simulate expert medical team collaboration.</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="row"><span class="project-name">Meal &amp; Grocery Planner with CrewAI</span><span class="project-stack">Python · CrewAI · Pydantic · LLMs · YAML · Agentic AI</span></div>
+    <ul>
+      <li>Built an end-to-end meal planning system using CrewAI agents for recipe research, shopping organization, and budget optimization — backed by a CrewBase architecture with Pydantic models and declarative YAML config for a reusable, maintainable agentic pipeline.</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="row"><span class="project-name">Style Finder: Computer Vision Fashion Analysis</span><span class="project-stack">Python · Llama 4 · Multimodal RAG · Computer Vision · Angular · Vector Search</span></div>
+    <ul>
+      <li>Built a multimodal RAG pipeline using Llama 4 Maverick 17B and image encoding for vector-based fashion similarity search — enabling users to upload photos and receive catalog-style AI insights on garments and styling elements via an Angular web application.</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="row"><span class="project-name">DataWizard: AI-Powered Data Analysis Agent</span><span class="project-stack">Python · LangChain · LLMs · Scikit-learn · Agentic AI</span></div>
+    <ul>
+      <li>Built a LangChain-powered AI agent enabling non-technical users to perform CSV analysis, statistical summarization, and ML model training through natural language — using a multi-step executor agent to orchestrate complex analytical workflows.</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="row"><span class="project-name">AI Meeting Assistant</span><span class="project-stack">Python · Whisper · AWS Bedrock · LangChain · React · LLMs</span></div>
+    <ul>
+      <li>Built an AI meeting assistant integrating Whisper STT with AWS Bedrock and LangChain PromptTemplate workflows — automating capture of decisions, action items, and deadlines from audio recordings into structured meeting minutes via a React interface.</li>
+    </ul>
+  </div>
+
+  <div class="project">
+    <div class="row"><span class="project-name">Interactive Food Search &amp; RAG Chatbot System</span><span class="project-stack">Python · Chroma DB · RAG · LLMs · NLP · CLI</span></div>
+    <ul>
+      <li>Built a food recommendation system combining Chroma DB vector search and RAG with advanced metadata filtering (cuisine, calories, ingredients) and CRUD operations — delivering AI-enhanced conversational recommendations across three distinct search approaches.</li>
+    </ul>
+  </div>
+</section>
+
+<section>
+  <h2>Skills</h2>
+  <div class="skills-grid">
+    <div class="skill"><strong>Generative AI:</strong> AWS Bedrock, AWS AgentCore, GitHub Copilot, Claude, ChatGPT, Hugging Face, Guardrails AI, Portkey, MCP (Model Context Protocol)</div>
+    <div class="skill"><strong>AI Techniques:</strong> RAG, Prompt Engineering, Fine-tuning, Vector Embeddings, NLP, Computer Vision, Multimodal AI</div>
+    <div class="skill"><strong>AI / ML:</strong> SageMaker, DeepEval, LangChain, LangGraph, LangSmith, LlamaIndex, CrewAI, AutoGen (AG2), Strands Agents, Whisper, Scikit-learn, NumPy, Pandas, Matplotlib, PyTorch, TensorFlow</div>
+    <div class="skill"><strong>Languages:</strong> Python, Java, TypeScript</div>
+    <div class="skill"><strong>Backend:</strong> Spring Boot, Flask, FastAPI, Hibernate, Pydantic</div>
+    <div class="skill"><strong>Frontend:</strong> Angular, React, Next.js, Streamlit</div>
+    <div class="skill"><strong>Web Services:</strong> RESTful APIs, GraphQL</div>
+    <div class="skill"><strong>Data Stores:</strong> S3, PostgreSQL, MySQL, DynamoDB, Redshift, Neo4j, Oracle, FAISS, Chroma DB, pgvector, Redis, Elasticsearch</div>
+    <div class="skill"><strong>Compute &amp; Containers:</strong> Elastic Beanstalk, EC2, ECS, AWS Lambda, EMR, Kubernetes, Apache Spark</div>
+    <div class="skill"><strong>Network &amp; Delivery:</strong> API Gateway, Apigee, Route 53, VPC, Elastic Load Balancing</div>
+    <div class="skill"><strong>Messaging &amp; Events:</strong> SNS, SQS, EventBridge, Apache Kafka</div>
+    <div class="skill"><strong>Monitoring &amp; Logging:</strong> CloudWatch, CloudTrail, X-Ray, Dynatrace, Splunk, OpenTelemetry, Google Analytics 4</div>
+    <div class="skill"><strong>Security &amp; Compliance:</strong> SonarQube, Ping Identity SSO, Secrets Manager, IAM, KMS</div>
+    <div class="skill"><strong>Workflow &amp; Orchestration:</strong> AWS Step Functions, AWS Glue</div>
+    <div class="skill"><strong>Infrastructure as Code:</strong> CloudFormation, Terraform</div>
+    <div class="skill"><strong>Build Tools:</strong> Maven, npm</div>
+    <div class="skill"><strong>CI/CD &amp; Deployment:</strong> Jenkins, GitLab, GitHub Actions, CodePipeline, Docker</div>
+  </div>
+</section>
+
+<section>
+  <h2>Certifications</h2>
+  <div class="certs-grid">
+    <div class="cert">
+      <div class="cert-name">IBM — 10 AI &amp; GenAI Certifications (2025)</div>
+      <div class="cert-detail">Agentic AI with LangGraph, CrewAI, AutoGen &amp; BeeAI · IBM RAG and Agentic AI · Multimodal GenAI Applications · Advanced RAG with Vector Databases · +6 GenAI &amp; Agentic AI courses</div>
+    </div>
+    <div class="cert">
+      <div class="cert-name">Amazon Web Services (2025)</div>
+      <div class="cert-detail">Generative AI for Developers · GenAI Applications with Amazon Bedrock · Getting Started with AWS GenAI</div>
+    </div>
+    <div class="cert">
+      <div class="cert-name">Databricks (2025)</div>
+      <div class="cert-detail">Academy Accreditation – Generative AI Fundamentals</div>
+    </div>
+    <div class="cert">
+      <div class="cert-name">Pegasystems &amp; Sun Microsystems</div>
+      <div class="cert-detail">PRPC CSA – Pegasystems · SCJP – Sun Microsystems</div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <h2>Education</h2>
+  <div class="job">
+    <div class="row"><span class="job-name">SRKR Engineering College</span><span class="job-loc">India</span></div>
+    <div class="row"><span class="job-role">Bachelor of Engineering</span><span class="job-dates">Aug 2000 – Oct 2004</span></div>
+  </div>
+</section>
+
+</body>
+</html>
