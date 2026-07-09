@@ -221,6 +221,8 @@
       font-size: 12px;
       color: var(--light);
       font-style: italic;
+      margin-left: auto;
+      text-align: right;
     }
 
     .projects-note {
@@ -310,6 +312,7 @@
       .skills-list { grid-template-columns: 1fr; }
       .cert-grid { grid-template-columns: 1fr; }
       .job-header, .project-header { flex-direction: column; gap: 2px; }
+      .project-stack { margin-left: 0; text-align: left; }
     }
   </style>
 </head>
@@ -431,7 +434,7 @@
       <div class="project">
         <div class="project-header">
           <span class="project-name">Finance Copilot: Conversational Personal Finance Assistant</span>
-          <span class="project-stack">Python · FastAPI · Anthropic Claude · Tool Use · SSE Streaming · Angular</span>
+          <span class="project-stack">Python · FastAPI · Claude · Tool Use · SSE · Angular</span>
         </div>
         <ul>
           <li>Built a conversational finance copilot with a streaming agentic tool-use loop on Anthropic Claude — eight finance tools spanning spending analysis, budgets, bills, and portfolio Q&amp;A, streamed token-by-token over SSE to an Angular 20 chat UI with a provider-pluggable backend supporting OpenAI-compatible endpoints.</li>
@@ -441,7 +444,7 @@
       <div class="project">
         <div class="project-header">
           <span class="project-name">FinDocQA: Financial Document Q&amp;A with RAG</span>
-          <span class="project-stack">Python · LangChain · FAISS · Cohere Embeddings · Claude · AWS S3 · Angular</span>
+          <span class="project-stack">Python · LangChain · FAISS · Cohere · Claude · AWS S3 · Angular</span>
         </div>
         <ul>
           <li>Built a RAG pipeline over annual reports and SEC filings using FAISS vector search with Cohere embeddings and LangChain — delivering grounded Claude answers with page-level citations through an Angular UI, with document storage on AWS S3.</li>
