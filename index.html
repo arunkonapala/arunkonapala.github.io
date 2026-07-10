@@ -232,6 +232,16 @@
       margin-bottom: 16px;
     }
 
+    .projects-subhead {
+      font-family: 'Arial', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--mid);
+      margin: 28px 0 14px;
+    }
+
     /* ── Skills ── */
     .skills-list {
       display: grid;
@@ -431,6 +441,8 @@
       <h2>Projects</h2>
       <p class="projects-note">Source code available at <a href="https://github.com/arunkonapala" target="_blank">github.com/arunkonapala</a></p>
 
+      <h3 class="projects-subhead">Featured</h3>
+
       <div class="project">
         <div class="project-header">
           <span class="project-name">Fraud Triage Agent: Agentic Transaction Screening</span>
@@ -483,21 +495,23 @@
 
       <div class="project">
         <div class="project-header">
-          <span class="project-name">AI Nutrition Coach: Meal Photo Analysis</span>
-          <span class="project-stack">Python · FastAPI · Claude Vision · Multimodal AI · Angular</span>
-        </div>
-        <ul>
-          <li>Built a multimodal nutrition assistant that analyzes meal photos with Claude vision agents — returning structured nutrient breakdowns and recipe ideas via a FastAPI backend and an Angular 20 interface.</li>
-        </ul>
-      </div>
-
-      <div class="project">
-        <div class="project-header">
           <span class="project-name">AutoMed: Multi-Agent Healthcare Chatbot</span>
           <span class="project-stack">Python · AG2 (AutoGen) · Multi-Agent AI · LLMs</span>
         </div>
         <ul>
           <li>Built a multi-agent healthcare chatbot using AG2 (AutoGen) orchestrating specialized agents for symptom analysis, treatment suggestions, and follow-up care — delivering health-history-aware, context-sensitive recommendations that simulate expert medical team collaboration.</li>
+        </ul>
+      </div>
+
+      <h3 class="projects-subhead">More Projects</h3>
+
+      <div class="project">
+        <div class="project-header">
+          <span class="project-name">AI Nutrition Coach: Meal Photo Analysis</span>
+          <span class="project-stack">Python · FastAPI · Claude Vision · Multimodal AI · Angular</span>
+        </div>
+        <ul>
+          <li>Built a multimodal nutrition assistant that analyzes meal photos with Claude vision agents — returning structured nutrient breakdowns and recipe ideas via a FastAPI backend and an Angular 20 interface.</li>
         </ul>
       </div>
 
