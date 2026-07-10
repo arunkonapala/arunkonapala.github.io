@@ -187,6 +187,13 @@
   <p class="projects-note">Source code available at github.com/arunkonapala</p>
 
   <div class="project">
+    <div class="row"><span class="project-name">Fraud Triage Agent: Agentic Transaction Screening</span><span class="project-stack">Python · LangGraph · Claude · FastAPI · Pydantic</span></div>
+    <ul>
+      <li>Built an agentic fraud-detection pipeline where a deterministic rules engine (transaction velocity, impossible travel, amount anomaly, merchant risk) gates escalation to a LangGraph-orchestrated Claude investigation agent — tool-calling over the customer ledger to issue structured verdicts with risk scores, cited evidence, and draft SAR narratives, with ambiguous cases routed to a human-review queue.</li>
+    </ul>
+  </div>
+
+  <div class="project">
     <div class="row"><span class="project-name">Finance Copilot: Conversational Personal Finance Assistant</span><span class="project-stack">Python · FastAPI · Claude · Tool Use · SSE · Angular</span></div>
     <ul>
       <li>Built a conversational finance copilot with a streaming agentic tool-use loop on Anthropic Claude — eight finance tools spanning spending analysis, budgets, bills, and portfolio Q&amp;A, streamed token-by-token over SSE to an Angular 20 chat UI with a provider-pluggable backend supporting OpenAI-compatible endpoints.</li>
@@ -218,13 +225,6 @@
     <div class="row"><span class="project-name">AutoMed: Multi-Agent Healthcare Chatbot</span><span class="project-stack">Python · AG2 (AutoGen) · Multi-Agent AI · LLMs</span></div>
     <ul>
       <li>Built a multi-agent healthcare chatbot using AG2 (AutoGen) orchestrating specialized agents for symptom analysis, treatment suggestions, and follow-up care — delivering health-history-aware, context-sensitive recommendations that simulate expert medical team collaboration.</li>
-    </ul>
-  </div>
-
-  <div class="project">
-    <div class="row"><span class="project-name">Meal &amp; Grocery Planner with CrewAI</span><span class="project-stack">Python · CrewAI · Pydantic · LLMs · YAML · Agentic AI</span></div>
-    <ul>
-      <li>Built an end-to-end meal planning system using CrewAI agents for recipe research, shopping organization, and budget optimization — backed by a CrewBase architecture with Pydantic models and declarative YAML config for a reusable, maintainable agentic pipeline.</li>
     </ul>
   </div>
 
